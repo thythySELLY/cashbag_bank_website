@@ -1,4 +1,4 @@
-import { homeRoute } from '@/pages/home/home';
-import { shopRoute } from '@/pages/shop/shop';
+import homeRoute from './home';
+import shopRoute from './shop';
 
 export { homeRoute, shopRoute };

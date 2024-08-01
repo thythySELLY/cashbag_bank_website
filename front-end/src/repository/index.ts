@@ -1,4 +1,5 @@
-import * as homeRepository from '@/repository/home-repository';
-import * as shopRepository from '@/repository/shop-repository';
+import * as systemRepository from './system-repository';
+import * as homeRepository from './home-repository';
+import * as shopRepository from './shop-repository';
 
-export { homeRepository };
+export { systemRepository, homeRepository, shopRepository };

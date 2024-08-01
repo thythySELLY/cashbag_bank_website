@@ -1,15 +1,14 @@
-import { homeRepository } from '@/repository';
+const styleTemplate = (color: string) => {
+  return `.color { color: ${color}; }\n`;
+};
 
-const setColor = async () => {
+const setDynamicStyle = async (color: string) => {
   try {
-    const data = await homeRepository.get('/api/colors');
-    const color: string = `#${data?.data.colors[8].hex}`;
-
     if (!color) {
       throw new Error('Color not found');
     }
 
-    const cssClass = `.color { color: ${color}; }\n`;
+    const cssClass = styleTemplate(color);
 
     let styleElement = document.getElementById(
       'dynamic-styles',
@@ -36,4 +35,4 @@ const setColor = async () => {
   }
 };
 
-export default setColor;
+export default setDynamicStyle;

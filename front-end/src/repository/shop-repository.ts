@@ -1,3 +1,8 @@
-const get = () => {};
+import { get } from '@/http';
 
-export { get };
+const getData = async (): Promise<object> => {
+  const data = await get('/api/shop');
+  return data;
+};
+
+export { getData };

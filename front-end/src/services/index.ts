@@ -1,4 +1,5 @@
-import * as homeServices from '@/services/home-services';
-import * as shopServices from '@/services/shop-services';
+import * as systemServices from './system-services';
+import * as homeServices from './home-services';
+import * as shopServices from './shop-services';
 
-export { homeServices, shopServices };
+export { systemServices, homeServices, shopServices };

@@ -1,3 +1,3 @@
-import setColor from '@/utils/set-color';
+import setDynamicStyle from './set-dynamic-style';
 
-export { setColor };
+export { setDynamicStyle };

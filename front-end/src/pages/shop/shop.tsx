@@ -1,4 +1,4 @@
-import { rootRoute } from '@/main';
+import { rootRoute } from '@/app';
 import { useParams, createRoute } from '@tanstack/react-router';
 
 const Shop = () => {

@@ -1,5 +1,5 @@
-import api from '@/http/endpoints';
-import { configureHttp, http } from '@/http/http';
-import { setBaseUrl } from '@/http/set-endpoints';
+import api from './endpoints';
+import { setHttp, get, post } from './http';
+import { setBaseUrl } from './set-endpoints';
 
-export { api, configureHttp, http, setBaseUrl };
+export { api, setHttp, get, post, setBaseUrl };
