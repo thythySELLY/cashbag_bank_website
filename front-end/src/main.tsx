@@ -1,16 +1,17 @@
-import React, { StrictMode } from 'react';
+import React, { useEffect, StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   RouterProvider,
   createRouter,
   createRootRoute,
 } from '@tanstack/react-router';
-import Navbar from '@/components/navbar';
-import { homeRoute } from '@/pages/home';
-import { shopRoute } from '@/pages/shop';
+import { Navbar } from '@/components';
+import { homeRoute, shopRoute } from '@/pages';
 
 export const rootRoute = createRootRoute({
-  component: () => <Navbar />,
+  component: () => {
+    return <Navbar />;
+  },
 });
 
 const routeTree = rootRoute.addChildren([homeRoute, shopRoute]);
@@ -29,6 +30,6 @@ if (!rootElement.innerHTML) {
   root.render(
     <StrictMode>
       <RouterProvider router={router} />
-    </StrictMode>
+    </StrictMode>,
   );
 }

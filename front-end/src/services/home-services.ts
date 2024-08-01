@@ -1,9 +1,15 @@
 import { useQuery } from '@tanstack/react-query';
-import instance from '@/api/config';
+import { setBaseUrl, http } from '@/http';
+import { setColor } from '@/utils';
+
+const setInitial = async (bankName: string) => {
+  await setBaseUrl(bankName);
+  await setColor();
+};
 
 const getData = (cacheKey: string, url: string) => {
   const fetchData = async () => {
-    const { data } = await instance.get(url);
+    const { data } = await http.get(url);
     return data;
   };
 
@@ -17,6 +23,6 @@ const getData = (cacheKey: string, url: string) => {
   return { data, error, isLoading };
 };
 
-// const usePost 
+// const usePost
 
-export { getData };
+export { setInitial, getData };
